@@ -1,0 +1,7 @@
+# Local/created files
+__pycache__
+src/database.db
+.vscode
+
+#project specific files
+todo.txt
