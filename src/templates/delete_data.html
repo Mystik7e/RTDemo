@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <title>RT Demo</title>
+    </head>
+    <body>
+        <ul>
+            <li><a href="./">Go Back</a></li>
+        </ul>
+        <h1>Delete a user</h1>
+        <form method="POST" action="/">
+            <input type="hidden" name="form_type" value="delete">
+            <label for="user_id">User ID:</label>
+            <input type="text" name="user_id">
+            <input type="submit" value="Delete data">
+        </form>
+        <ul id="data_display">
+            {% for data_set in data_display %}
+                <li>
+                    {% for data in data_set %}
+                        <p>{{ data }}</p>
+                    {% endfor %}
+                </li>
+                <br>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
